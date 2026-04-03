@@ -1,0 +1,9 @@
+# 環境変数・シークレット
+.env
+my-secret-key.txt
+
+# Node.js
+node_modules/
+
+# スクリーンショット
+*.png

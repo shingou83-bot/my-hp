@@ -1,0 +1,16 @@
+{
+  "name": "my-hp",
+  "version": "1.0.0",
+  "description": "だるま大将のホームページ（Claude API バックエンドプロキシ付き）",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.55.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2"
+  }
+}
