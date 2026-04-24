@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>内田真悟｜病院・クリニック専用 AIデジタル社員 構築代行</title>
+  <title>内田真悟｜病院・クリニック向け AIシステム構築・運用支援</title>
   <style>
     /* =============================================
        Google Fonts 読み込み
@@ -902,6 +902,248 @@
     }
 
     /* =============================================
+       Track Record セクション（数値実績バー）
+    ============================================= */
+    #track-record {
+      background: var(--bg2);
+      padding: 56px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .track-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .track-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .track-num {
+      font-size: clamp(2.4rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      line-height: 1;
+      font-family: 'Inter', sans-serif;
+    }
+    .track-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      line-height: 1.5;
+    }
+
+    /* =============================================
+       Case Studies セクション
+    ============================================= */
+    #case-studies { background: var(--bg); }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    }
+    .case-tag {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      background: rgba(91,80,232,0.08);
+      border: 1px solid rgba(91,80,232,0.22);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .case-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: var(--text);
+    }
+    .case-block { display: flex; flex-direction: column; gap: 6px; }
+    .case-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent2);
+      text-transform: uppercase;
+    }
+    .case-text {
+      font-size: 0.88rem;
+      color: rgba(26,26,26,0.72);
+      line-height: 1.75;
+    }
+    .case-demo-btn {
+      margin-top: auto;
+      align-self: stretch;
+      justify-content: center;
+      font-size: 0.82rem;
+      padding: 11px 18px;
+    }
+
+    /* =============================================
+       Voices セクション
+    ============================================= */
+    #voices { background: var(--bg2); }
+
+    .voices-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .voice-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .voice-quote {
+      font-size: 2.4rem;
+      color: var(--accent);
+      line-height: 0.9;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+    .voice-text {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.9;
+      flex: 1;
+    }
+    .voice-author {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    /* =============================================
+       Process セクション
+    ============================================= */
+    #process { background: var(--bg); }
+
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .process-step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .process-step:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    }
+    .process-num {
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+    }
+    .process-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .process-step p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* =============================================
+       FAQ セクション
+    ============================================= */
+    #faq { background: var(--bg2); }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item.open { border-color: rgba(91,80,232,0.35); }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 20px 24px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+    .faq-question::after {
+      content: '＋';
+      font-weight: 400;
+      color: var(--accent);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-answer p {
+      padding: 0 24px 22px;
+      font-size: 0.9rem;
+      color: rgba(26,26,26,0.72);
+      line-height: 1.9;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+
+    /* =============================================
        レスポンシブ（600px ブレークポイント）
     ============================================= */
     @media (max-width: 600px) {
@@ -932,8 +1174,25 @@
       /* デモ */
       .demo-grid { grid-template-columns: 1fr; }
 
+      /* 実績バー */
+      #track-record { padding: 40px 20px; }
+      .track-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }
+
+      /* 事例 */
+      .case-grid { grid-template-columns: 1fr; }
+
+      /* お客様の声 */
+      .voices-grid { grid-template-columns: 1fr; }
+
       /* 料金 */
       .pricing-grid { grid-template-columns: 1fr; }
+
+      /* 導入プロセス */
+      .process-list { grid-template-columns: 1fr; }
+
+      /* FAQ */
+      .faq-question { padding: 16px 20px; font-size: 0.95rem; }
+      .faq-answer p { padding: 0 20px 18px; }
 
       /* シミュレーション */
       .simulation-box { padding: 40px 24px; }
@@ -956,8 +1215,10 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">サービス</a></li>
-      <li><a href="#demo">デモ</a></li>
+      <li><a href="#case-studies">事例</a></li>
+      <li><a href="#demo">Portfolio</a></li>
       <li><a href="#pricing">料金</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-cta">無料相談</a></li>
     </ul>
 
@@ -969,11 +1230,13 @@
 
   <!-- モバイルメニュー -->
   <div class="nav-mobile" id="nav-mobile">
-    <a href="#about"      onclick="closeMobileMenu()">About</a>
-    <a href="#services"   onclick="closeMobileMenu()">サービス</a>
-    <a href="#demo"       onclick="closeMobileMenu()">デモ</a>
-    <a href="#pricing"    onclick="closeMobileMenu()">料金</a>
-    <a href="#contact"    onclick="closeMobileMenu()">無料相談</a>
+    <a href="#about"         onclick="closeMobileMenu()">About</a>
+    <a href="#services"      onclick="closeMobileMenu()">サービス</a>
+    <a href="#case-studies"  onclick="closeMobileMenu()">事例</a>
+    <a href="#demo"          onclick="closeMobileMenu()">デモ</a>
+    <a href="#pricing"       onclick="closeMobileMenu()">料金</a>
+    <a href="#faq"           onclick="closeMobileMenu()">FAQ</a>
+    <a href="#contact"       onclick="closeMobileMenu()">無料相談</a>
   </div>
 
 
@@ -984,18 +1247,43 @@
     <div class="hero-inner">
       <div class="hero-badge fade-in">現役看護師 × AI エージェント構築代行</div>
       <h1 class="hero-title fade-in">
-        月曜朝の電話パンクを、<br>
-        AIという<br>
-        「文句を言わない即戦力」で<br>
-        解消しませんか？
+        医療現場の業務負荷を減らし、<br>
+        患者ケアの質を高める。<br>
+        現役看護師が作る、<br>
+        現場で<strong style="color:var(--accent);">"使い続けられる"</strong>AI。
       </h1>
       <p class="hero-sub fade-in">
-        御院のWebサイト・診察案内・院内マニュアルを完璧に記憶した<br>
-        <strong>専用AIデジタル社員</strong>を、現役看護師が仕立て上げます。
+        電話対応・問診・看護記録・職員研修まで、<br>
+        クリニック・病院の実務に溶け込む<strong>専用AIシステム</strong>を、現役看護師が設計・構築します。
       </p>
       <div class="hero-cta fade-in">
         <a href="#contact" class="btn btn-primary">📩 無料シミュレーションを依頼する</a>
         <a href="#demo"    class="btn btn-ghost">▶ デモを体験する</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       Track Record / 数値実績バー
+  ============================================= -->
+  <section id="track-record">
+    <div class="track-grid fade-in">
+      <div class="track-item">
+        <div class="track-num">15<span style="font-size:0.6em;">+</span></div>
+        <div class="track-label">研修セッション<br>実施実績</div>
+      </div>
+      <div class="track-item">
+        <div class="track-num">v5</div>
+        <div class="track-label">SOAP記録AI<br>反復改善バージョン</div>
+      </div>
+      <div class="track-item">
+        <div class="track-num">3</div>
+        <div class="track-label">受付・記録・研修の<br>提供領域</div>
+      </div>
+      <div class="track-item">
+        <div class="track-num" style="font-size:clamp(1.6rem,3vw,2.2rem);">現役</div>
+        <div class="track-label">看護師が<br>現場目線で設計</div>
       </div>
     </div>
   </section>
@@ -1040,14 +1328,14 @@
             はじめまして、AIエージェント構築代行をしております現役看護師の<strong>内田真悟</strong>と申します。
           </p>
           <p>
-            私は単なるチャットボットではなく、<strong>「現場の看護師や受付スタッフの思考を学習し、実務をこなすデジタル医療事務」</strong>を構築しています。
+            私は単なるチャットボットではなく、<strong>受付・問診・記録・職員教育まで含めて、現場スタッフの思考を学習し実務に溶け込むAIシステム</strong>を設計しています。
           </p>
           <p>
-            医療現場の深刻な人手不足と、鳴り止まない電話対応。「AIは難しそう」と思われるかもしれませんが、ご安心ください。
-            <strong>「スタッフに代わって、患者さんに何を伝えてほしいか」</strong>を私に伝えていただくだけで大丈夫です。
+            医療現場の深刻な人手不足、書類業務の肥大化、生成AI活用のばらつき。「AIは難しそう」と思われるかもしれませんが、ご安心ください。
+            <strong>「スタッフに代わって、何を判断・記録・案内してほしいか」</strong>を私に伝えていただくだけで大丈夫です。
           </p>
           <p>
-            御院専用の「優秀なデジタル社員」を仕立て上げます。
+            御院の業務に合わせた、<strong>"使い続けられる"AI</strong>を仕立て上げます。
           </p>
         </div>
       </div>
@@ -1069,25 +1357,25 @@
       <div class="problem-grid">
         <div class="problem-card fade-in">
           <div class="problem-icon">📞</div>
-          <h3>鳴り止まない電話</h3>
-          <p>月曜朝は回線パンク。定型の問い合わせが殺到し、スタッフの業務が中断される</p>
+          <h3>受付・電話業務の逼迫</h3>
+          <p>月曜朝は回線パンク、定型の問い合わせで業務が中断。予約・混雑案内に人手が奪われる</p>
         </div>
         <div class="problem-card fade-in">
-          <div class="problem-icon">👩‍⚕️</div>
-          <h3>慢性的な人手不足</h3>
-          <p>採用しても育てる余裕がない。既存スタッフへの負担が増え続けている</p>
+          <div class="problem-icon">📝</div>
+          <h3>記録・書類業務の負荷</h3>
+          <p>看護記録・問診・説明文書など、多職種連携の文書が山積み。記録の質と効率の両立が難しい</p>
         </div>
         <div class="problem-card fade-in">
-          <div class="problem-icon">😰</div>
-          <h3>スタッフの疲弊・離職</h3>
-          <p>同じ質問への繰り返し対応がストレスに。優秀なスタッフほど燃え尽きてしまう</p>
+          <div class="problem-icon">🤔</div>
+          <h3>AI活用のばらつき</h3>
+          <p>生成AI導入後も職員の指示の出し方がバラつき、安全に使い切れていない。教育リソースも不足</p>
         </div>
       </div>
 
       <!-- 解決への橋渡し -->
       <div class="solution-arrow fade-in">
         <div class="arrow-text">
-          ↓ これらをまとめて解決するのが「AIデジタル社員」です
+          ↓ これらを現場目線で解決するAIシステムを、現役看護師が設計します
         </div>
       </div>
     </div>
@@ -1101,55 +1389,55 @@
     <div class="section-inner">
       <div class="section-heading fade-in">
         <span class="label">Services</span>
-        <h2>御院専用 AIデジタル社員</h2>
-        <p>御院のWebサイト・診察案内・院内マニュアルを完璧に記憶した<br>5つの専門エージェントを提供します</p>
+        <h2>提供サービス</h2>
+        <p>受付・記録・教育の3領域で、現場に溶け込むAIシステムを設計・構築します</p>
       </div>
 
       <div class="services-grid">
-        <!-- サービス① -->
+        <!-- サービス① 受付・電話対応AI -->
         <div class="service-card fade-in">
           <div class="service-num">SERVICE 01</div>
-          <div class="service-icon">🍼</div>
-          <div class="service-target">小児科・産婦人科</div>
-          <h3>24時間安心「ママの味方」エージェント</h3>
+          <div class="service-icon">📞</div>
+          <div class="service-target">クリニック・診療所</div>
+          <h3>受付・電話対応AI</h3>
           <p>
-            夜間の発熱相談から地域救急窓口（#8000等）の案内、受診目安の提示を代行。
-            深夜でも不安な保護者に寄り添い、適切な情報を届けます。
+            問い合わせ対応・予約案内・混雑案内を自動化し、スタッフを繰り返し対応から解放します。
+            小児科（夜間発熱相談）／健診センター（コース・当日キャンセル防止）／耳鼻科・皮膚科（繁忙期パンク対策）など、
+            診療科別の専用テンプレートをご用意しています。
           </p>
-          <a href="https://udify.app/chat/xTZB4lgSewfxSkrU" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
-            ▶ デモを体験する
+          <a href="#demo" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
+            ▶ ライブデモを見る
           </a>
         </div>
 
-        <!-- サービス② -->
+        <!-- サービス② 問診・記録AI -->
         <div class="service-card fade-in">
           <div class="service-num">SERVICE 02</div>
-          <div class="service-icon">🩻</div>
-          <div class="service-target">健診センター・総合病院</div>
-          <h3>健診・ドック「事務主任」エージェント</h3>
+          <div class="service-icon">📝</div>
+          <div class="service-target">歯科・病院・総合診療</div>
+          <h3>問診・記録AI</h3>
           <p>
-            コース案内や前日の食事制限をガイド。
-            注意事項未遵守による「当日キャンセル」を防止し、
-            スタッフの無駄な対応コストを削減します。
+            来院前の問診ガイドや、経過データからの看護SOAP記録の自動生成で、書類業務を支援します。
+            口腔×全身リスク問診AI、週間SOAP自動生成（v5まで反復改善）など、
+            現場運用に耐えうる設計を重視しています。
           </p>
-          <a href="https://udify.app/chat/vRGfDiaIhveZo1lT" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
-            ▶ デモを体験する
+          <a href="#case-studies" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
+            ▶ 事例・デモを見る
           </a>
         </div>
 
-        <!-- サービス③ -->
+        <!-- サービス③ AI活用研修・コンサル -->
         <div class="service-card fade-in">
           <div class="service-num">SERVICE 03</div>
-          <div class="service-icon">👂</div>
-          <div class="service-target">耳鼻科・皮膚科</div>
-          <h3>繁忙期「パンク対策」エージェント</h3>
+          <div class="service-icon">🎓</div>
+          <div class="service-target">病院・診療所（職員研修）</div>
+          <h3>AI活用研修・コンサル</h3>
           <p>
-            「今何分待ち？」等の混雑案内や定型質問を代行。
-            スタッフを電話対応のストレスから解放し、
-            患者さんへのケアに集中できる環境を実現します。
+            「役割明示・フォーマット指定・出力確認」を柱に、医療職員が安全に生成AIを使うための体系化カリキュラムを提供。
+            これまでに15セッション以上の実績があり、職種別に内容を噛み砕いてお届けします。
           </p>
-          <a href="https://udify.app/chat/P7ukJI0Qz4vNn50E" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
-            ▶ デモを体験する
+          <a href="https://medicalpromptslides.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
+            ▶ 講座スライドを見る ↗
           </a>
         </div>
       </div>
@@ -1158,23 +1446,91 @@
 
 
   <!-- =============================================
-       デモ体験セクション
+       Case Studies / 導入事例セクション
+  ============================================= -->
+  <section id="case-studies">
+    <div class="section-inner">
+      <div class="section-heading fade-in">
+        <span class="label">Case Studies</span>
+        <h2>導入事例</h2>
+        <p>医療現場の実際の課題と、AI導入による変化の事例をご紹介します</p>
+      </div>
+
+      <div class="case-grid">
+        <!-- 事例① 歯科クリニック -->
+        <div class="case-card fade-in">
+          <span class="case-tag">歯科クリニック</span>
+          <h3>口腔×全身リスク問診AI</h3>
+          <div class="case-block">
+            <span class="case-label">Challenge / 課題</span>
+            <p class="case-text">問診・全身リスクの説明に時間がかかり、スタッフの負担が大きい</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Approach / 取り組み</span>
+            <p class="case-text">対話型ガイドとして口腔×全身リスク問診AIを検証。来院前の情報整理と説明の平準化を実現</p>
+          </div>
+          <a href="https://amano-dental-interview.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline case-demo-btn">
+            ▶ デモを見る ↗
+          </a>
+        </div>
+
+        <!-- 事例② 病院 -->
+        <div class="case-card fade-in">
+          <span class="case-tag">病院（地域包括ケア）</span>
+          <h3>看護SOAP記録の自動生成</h3>
+          <div class="case-block">
+            <span class="case-label">Challenge / 課題</span>
+            <p class="case-text">多職種連携の文書が多く、看護記録の質と効率の両立が課題</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Approach / 取り組み</span>
+            <p class="case-text">週間SOAPの自動生成システム（v5まで反復改善）で、経過データから記録の下書きを生成する運用を実証</p>
+          </div>
+          <a href="https://soap-demo-v5.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline case-demo-btn">
+            ▶ デモを見る ↗
+          </a>
+        </div>
+
+        <!-- 事例③ 職員研修 -->
+        <div class="case-card fade-in">
+          <span class="case-tag">病院・診療所（研修）</span>
+          <h3>医療職員向けプロンプト基礎講座</h3>
+          <div class="case-block">
+            <span class="case-label">Challenge / 課題</span>
+            <p class="case-text">生成AI導入後も職員の指示の出し方がばらつき、安全に使い切れていない</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label">Approach / 取り組み</span>
+            <p class="case-text">「役割明示・フォーマット指定・出力確認」を柱に体系化した講座を15セッション以上実施</p>
+          </div>
+          <a href="https://medicalpromptslides.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline case-demo-btn">
+            ▶ 講座スライドを見る ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       Portfolio / ライブデモ一覧
   ============================================= -->
   <section id="demo">
     <div class="section-inner">
       <div class="section-heading fade-in">
-        <span class="label">Demo</span>
-        <h2>実際のAIと話してみる</h2>
-        <p>医療機関を想定した実戦的なデモをご用意しています。<br>URLをクリックすると、今すぐAIと会話できます。</p>
+        <span class="label">Portfolio</span>
+        <h2>ライブデモ一覧</h2>
+        <p>受付・問診・記録・研修の各領域で、実際に触れるデモをご用意しています。<br>リンクをクリックすると、今すぐAIと会話・操作できます。</p>
       </div>
 
       <div class="demo-grid">
+        <!-- 受付系 -->
         <div class="demo-card fade-in">
           <div class="demo-num">01</div>
           <h3>小児科：24時間「ママの味方」AI</h3>
           <p>夜間・休日の発熱相談や受診目安の確認ができます</p>
           <a href="https://udify.app/chat/xTZB4lgSewfxSkrU" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
-            デモ①を体験する ↗
+            デモを体験する ↗
           </a>
         </div>
 
@@ -1183,7 +1539,7 @@
           <h3>健診・総合：窓口「事務主任」AI</h3>
           <p>健診コース案内・前日の注意事項をAIが丁寧に説明</p>
           <a href="https://udify.app/chat/vRGfDiaIhveZo1lT" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
-            デモ②を体験する ↗
+            デモを体験する ↗
           </a>
         </div>
 
@@ -1192,8 +1548,71 @@
           <h3>耳鼻科・皮膚科：繁忙期「パンク対策」AI</h3>
           <p>混雑状況の案内や定型質問への自動応答を体験できます</p>
           <a href="https://udify.app/chat/P7ukJI0Qz4vNn50E" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
-            デモ③を体験する ↗
+            デモを体験する ↗
           </a>
+        </div>
+
+        <!-- 問診・記録系 -->
+        <div class="demo-card fade-in">
+          <div class="demo-num">04</div>
+          <h3>歯科：口腔×全身リスク問診AI</h3>
+          <p>対話型ガイドで来院前の情報整理と説明の平準化を実現</p>
+          <a href="https://amano-dental-interview.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
+            デモを体験する ↗
+          </a>
+        </div>
+
+        <div class="demo-card fade-in">
+          <div class="demo-num">05</div>
+          <h3>看護：週間SOAP記録の自動生成（v5）</h3>
+          <p>経過データから看護記録の下書きを自動生成する運用デモ</p>
+          <a href="https://soap-demo-v5.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
+            デモを体験する ↗
+          </a>
+        </div>
+
+        <!-- 研修系 -->
+        <div class="demo-card fade-in">
+          <div class="demo-num">06</div>
+          <h3>研修：医療職員向けプロンプト基礎講座</h3>
+          <p>役割明示・フォーマット指定・出力確認を体系化した講座</p>
+          <a href="https://medicalpromptslides.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
+            スライドを見る ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       Voices / お客様の声セクション
+  ============================================= -->
+  <section id="voices">
+    <div class="section-inner">
+      <div class="section-heading fade-in">
+        <span class="label">Voices</span>
+        <h2>お客様の声</h2>
+        <p>現場の導入担当者からいただいたコメントをご紹介します</p>
+      </div>
+
+      <div class="voices-grid">
+        <div class="voice-card fade-in">
+          <div class="voice-quote">“</div>
+          <p class="voice-text">現場の記録の流れを理解したうえで、AIの落とし所を一緒に考えてくれた。</p>
+          <div class="voice-author">— 診療所 管理者</div>
+        </div>
+
+        <div class="voice-card fade-in">
+          <div class="voice-quote">“</div>
+          <p class="voice-text">スタッフがイメージしやすく、院内向けの説明資料にそのまま使えた。</p>
+          <div class="voice-author">— 歯科クリニック 関係者</div>
+        </div>
+
+        <div class="voice-card fade-in">
+          <div class="voice-quote">“</div>
+          <p class="voice-text">職種別に噛み砕かれており、導入初期の不安を減らしてくれた。</p>
+          <div class="voice-author">— 病院 教育担当</div>
         </div>
       </div>
     </div>
@@ -1263,6 +1682,114 @@
 
 
   <!-- =============================================
+       Process / 導入プロセスセクション
+  ============================================= -->
+  <section id="process">
+    <div class="section-inner">
+      <div class="section-heading fade-in">
+        <span class="label">Process</span>
+        <h2>導入までの流れ</h2>
+        <p>無料相談からサポートまで、6つのステップで安心してご導入いただけます</p>
+      </div>
+
+      <div class="process-list">
+        <div class="process-step fade-in">
+          <div class="process-num">STEP 01</div>
+          <h3>無料相談</h3>
+          <p>課題・規模・希望時期をヒアリングします</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="process-num">STEP 02</div>
+          <h3>詳細ヒアリング</h3>
+          <p>業務フローや既存システム環境を確認します</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="process-num">STEP 03</div>
+          <h3>デモ提供</h3>
+          <p>イメージに近いプロトタイプを共有します</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="process-num">STEP 04</div>
+          <h3>契約</h3>
+          <p>範囲・スケジュール・保守内容を明文化します</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="process-num">STEP 05</div>
+          <h3>構築・導入</h3>
+          <p>開発・システム連携・テストを実施します</p>
+        </div>
+        <div class="process-step fade-in">
+          <div class="process-num">STEP 06</div>
+          <h3>サポート</h3>
+          <p>運用フォローと改善サイクルを継続します</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FAQ セクション
+  ============================================= -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-heading fade-in">
+        <span class="label">FAQ</span>
+        <h2>よくあるご質問</h2>
+        <p>導入前によくいただくご質問にお答えします</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-question" type="button">
+            <span>医療情報のセキュリティは大丈夫ですか？</span>
+          </button>
+          <div class="faq-answer">
+            <p>オンプレミス寄りの構成・使用APIの選択・アクセス制御・ログ方針を個別に設計します。個人情報は院内規程に沿って、匿名化やマスキングを実施したうえで扱います。</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" type="button">
+            <span>費用はどのくらいかかりますか？</span>
+          </button>
+          <div class="faq-answer">
+            <p>規模・連携範囲・運用人数によって変動します。無料相談のあと、お見積りと段階的に進めるプランをご提案いたします。基本プランは50,000円〜、モニタープランは30,000円〜からご用意しています。</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" type="button">
+            <span>ITに詳しくなくても使えますか？</span>
+          </button>
+          <div class="faq-answer">
+            <p>操作画面の簡素化・マニュアル作成・簡易トレーニングをセットでご提供します。現場スタッフが日常業務の延長で自然に使えるように設計しますのでご安心ください。</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" type="button">
+            <span>導入までどのくらいの期間がかかりますか？</span>
+          </button>
+          <div class="faq-answer">
+            <p>PoC（概念実証）は数週間から、本番連携を含む場合は数ヶ月かかることがあります。規模に応じて段階的にリリースすることも可能です。</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question" type="button">
+            <span>導入後のサポートはありますか？</span>
+          </button>
+          <div class="faq-answer">
+            <p>継続サポートプラン（月額15,000円〜）をご用意しています。回答精度のメンテナンス、感染症情報やワクチン在庫情報の更新代行、月次レポートの提供、改善提案・チューニングまで継続的にフォローします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
        無料シミュレーション CTA セクション
   ============================================= -->
   <section id="simulation">
@@ -1270,18 +1797,18 @@
       <div class="simulation-box fade-in">
         <h2>【無料】AI導入シミュレーション＆<br>専用デモ作成</h2>
         <p>
-          「うちの電話がどれくらい楽になるのか？」<br>
-          実際の効果を確認してから導入をご判断いただけます。
+          「うちの受付・記録・研修がどれくらい楽になるのか？」<br>
+          実際の効果を数値とデモで確認してから、導入をご判断いただけます。
         </p>
 
         <div class="simulation-steps">
           <div class="sim-step">
             <div class="sim-step-num">1</div>
-            <p><strong>削減時間の算出</strong><br>貴院の現状をヒアリングし、AI導入で月間何時間の削減が可能かを算出します</p>
+            <p><strong>削減時間の試算</strong><br>貴院の受付・記録・書類業務をヒアリングし、AI導入で月間何時間の削減が可能かを数値で算出します</p>
           </div>
           <div class="sim-step">
             <div class="sim-step-num">2</div>
-            <p><strong>専用デモの構築</strong><br>貴院のWebサイト情報を学習させた「専用チャットボット」を作成。実際の回答精度をスマホでご確認いただけます</p>
+            <p><strong>専用デモの構築</strong><br>貴院の業務情報を学習させた「専用AIデモ」を作成。回答・出力精度をスマホで直接ご確認いただけます</p>
           </div>
         </div>
 
@@ -1336,7 +1863,7 @@
        フッター
   ============================================= -->
   <footer>
-    © 2026 内田真悟 — 病院・クリニック専用 AIデジタル社員 構築代行
+    © 2026 内田真悟 — 病院・クリニック向け AIシステム構築・運用支援
   </footer>
 
 
@@ -1416,6 +1943,16 @@
     fadeEls.forEach(el => observer.observe(el));
 
     /* -----------------------------------------------
+       FAQ: アコーディオン開閉
+    ----------------------------------------------- */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    /* -----------------------------------------------
        チャットボット: パネル開閉
     ----------------------------------------------- */
     const chatToggle = document.getElementById('chat-toggle');
@@ -1445,18 +1982,31 @@
 
 【プロフィール】
 - 名前：内田真悟
-- 職業：現役看護師 × AIエージェント構築代行
+- 職業：現役看護師 × AIシステム構築・運用支援
 - メール：dharmaplus83@gmail.com
 - X(Twitter)：@dharmaplus83
 
 【サービス概要】
-病院・クリニック向けに「AIデジタル社員」を構築代行するサービスを提供。
-単なるチャットボットではなく、現場スタッフの思考を学習した「デジタル医療事務」を構築。
+病院・クリニック向けに、受付・問診・記録・職員教育まで現場に溶け込む「AIシステム」を設計・構築。
+単なるチャットボットではなく、現場スタッフの思考を学習し実務に使い続けられるAIを提供。
 
-【提供中のAIエージェント】
-① 24時間「ママの味方」（小児科・産婦人科）：夜間発熱相談・受診目安の案内
-② 健診・ドック「事務主任」（健診センター・総合病院）：コース案内・当日キャンセル防止
-③ 繁忙期「パンク対策」（耳鼻科・皮膚科）：混雑案内・定型質問の代行
+【提供サービス（3領域）】
+■ Service 01：受付・電話対応AI
+- 問い合わせ対応・予約案内・混雑案内の自動化
+- 診療科別テンプレ：
+  ・小児科「ママの味方」（夜間発熱相談・受診目安）
+  ・健診・ドック「事務主任」（コース案内・当日キャンセル防止）
+  ・耳鼻科・皮膚科「パンク対策」（繁忙期混雑案内）
+
+■ Service 02：問診・記録AI
+- 口腔×全身リスク問診AI（歯科クリニック向け）
+- 週間SOAP記録の自動生成システム（v5まで反復改善）
+- 書類業務の効率化と記録品質の平準化
+
+■ Service 03：AI活用研修・コンサル
+- 医療職員向けプロンプト基礎講座（15セッション以上の実績）
+- 「役割明示・フォーマット指定・出力確認」を柱に体系化
+- 職種別に噛み砕いた内容で、生成AIの安全な運用を支援
 
 【料金プラン】
 - 基本プラン：50,000円〜（AI構築、データ学習、Web・LINE公開設定込み）
@@ -1472,16 +2022,16 @@
 AIの難しさへの不安を解消し、導入のメリットを分かりやすく伝えてください。
 
 【回答スタイルのルール】
-「内田真悟のAIエージェント構築サービスとは？」という質問には、次の構成・ボリュームを参考に回答してください：
+「内田真悟のAIシステム構築サービスとは？」という質問には、次の構成・ボリュームを参考に回答してください：
 
 ---
-## 内田真悟のAIエージェント構築サービスとは？
-病院・クリニック向けに、現場スタッフの思考を学習した「AIデジタル社員」を作るサービスです。現役看護師が設計するため、医療現場の実務に即した対応ができます。
+## 内田真悟のAIシステム構築サービスとは？
+病院・クリニック向けに、受付・問診・記録・職員教育まで現場に溶け込むAIシステムを設計・構築するサービスです。現役看護師が設計するため、医療現場の実務に即した運用ができます。
 
 ### 何ができる？
-- 夜間の発熱相談や受診目安の自動案内（小児科・産婦人科向け）
-- 健診コース案内・予約対応・当日キャンセル防止の自動化（健診センター向け）
-- 繁忙期の混雑案内や定型質問の自動対応（耳鼻科・皮膚科向け）
+- 受付・電話対応AI：問い合わせ対応・予約案内・混雑案内の自動化（診療科別テンプレあり）
+- 問診・記録AI：口腔×全身リスク問診AI、週間SOAP記録の自動生成など書類業務を支援
+- AI活用研修・コンサル：医療職員向けプロンプト基礎講座（15セッション以上の実績）
 
 ### 料金とお試し
 - 基本プラン：50,000円〜

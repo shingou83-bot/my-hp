@@ -6,12 +6,18 @@
 import 'dotenv/config';
 import express from 'express';
 import Anthropic from '@anthropic-ai/sdk';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
 
+/* ESモジュールで __dirname を再現 */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = dirname(__filename);
+
 /* 静的ファイル（index.html 等）を配信 */
-app.use(express.static('.'));
+app.use(express.static(__dirname));
 app.use(express.json());
 
 /* Anthropic クライアント（APIキーは環境変数から自動読み込み） */
@@ -43,6 +49,12 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`サーバー起動: http://localhost:${PORT}`);
-});
+/* Vercel以外（ローカル開発）の場合のみ listen を呼ぶ */
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`サーバー起動: http://localhost:${PORT}`);
+  });
+}
+
+/* Vercel サーバーレス向けにアプリをエクスポート */
+export default app;

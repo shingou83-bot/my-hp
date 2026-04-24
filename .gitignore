@@ -7,3 +7,8 @@ node_modules/
 
 # スクリーンショット
 *.png
+
+.vercel
+
+# ローカル開発設定
+.claude/
