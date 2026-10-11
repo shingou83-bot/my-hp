@@ -1005,41 +1005,6 @@
     /* =============================================
        Voices セクション
     ============================================= */
-    #voices { background: var(--bg2); }
-
-    .voices-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .voice-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    .voice-quote {
-      font-size: 2.4rem;
-      color: var(--accent);
-      line-height: 0.9;
-      font-family: Georgia, 'Times New Roman', serif;
-    }
-    .voice-text {
-      font-size: 0.92rem;
-      color: var(--text);
-      line-height: 1.9;
-      flex: 1;
-    }
-    .voice-author {
-      font-size: 0.8rem;
-      color: var(--muted);
-      font-weight: 600;
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
-    }
 
     /* =============================================
        Process セクション
@@ -1181,9 +1146,6 @@
       /* 事例 */
       .case-grid { grid-template-columns: 1fr; }
 
-      /* お客様の声 */
-      .voices-grid { grid-template-columns: 1fr; }
-
       /* 料金 */
       .pricing-grid { grid-template-columns: 1fr; }
 
@@ -1219,7 +1181,7 @@
       <li><a href="#demo">Portfolio</a></li>
       <li><a href="#pricing">料金</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact" class="nav-cta">無料相談</a></li>
+      <li><a href="#contact" class="nav-cta">無料でご相談（フォーム）</a></li>
     </ul>
 
     <!-- モバイルハンバーガー -->
@@ -1236,7 +1198,7 @@
     <a href="#demo"          onclick="closeMobileMenu()">デモ</a>
     <a href="#pricing"       onclick="closeMobileMenu()">料金</a>
     <a href="#faq"           onclick="closeMobileMenu()">FAQ</a>
-    <a href="#contact"       onclick="closeMobileMenu()">無料相談</a>
+    <a href="#contact"       onclick="closeMobileMenu()">無料でご相談（フォーム）</a>
   </div>
 
 
@@ -1270,8 +1232,8 @@
   <section id="track-record">
     <div class="track-grid fade-in">
       <div class="track-item">
-        <div class="track-num">15<span style="font-size:0.6em;">+</span></div>
-        <div class="track-label">研修セッション<br>実施実績</div>
+        <div class="track-num">15<span style="font-size:0.6em;">回</span></div>
+        <div class="track-label">研修カリキュラム<br>作成済み</div>
       </div>
       <div class="track-item">
         <div class="track-num">v5</div>
@@ -1317,7 +1279,7 @@
             </div>
             <div class="trust-badge">
               <span class="icon">💬</span>
-              LINE / Web 公開設定まで一括対応
+              Web 公開設定まで一括対応（LINEはオプション）
             </div>
           </div>
         </div>
@@ -1402,7 +1364,7 @@
           <h3>受付・電話対応AI</h3>
           <p>
             問い合わせ対応・予約案内・混雑案内を自動化し、スタッフを繰り返し対応から解放します。
-            小児科（夜間発熱相談）／健診センター（コース・当日キャンセル防止）／耳鼻科・皮膚科（繁忙期パンク対策）など、
+            小児科（夜間・休日の受診先案内）／健診センター（コース・当日キャンセル防止）／耳鼻科・皮膚科（繁忙期パンク対策）など、
             診療科別の専用テンプレートをご用意しています。
           </p>
           <a href="#demo" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
@@ -1434,7 +1396,7 @@
           <h3>AI活用研修・コンサル</h3>
           <p>
             「役割明示・フォーマット指定・出力確認」を柱に、医療職員が安全に生成AIを使うための体系化カリキュラムを提供。
-            これまでに15セッション以上の実績があり、職種別に内容を噛み砕いてお届けします。
+            全15回の体系化カリキュラムを設計済みで、職種別に内容を噛み砕いてお届けします。
           </p>
           <a href="https://medicalpromptslides.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.8rem; padding:9px 18px;">
             ▶ 講座スライドを見る ↗
@@ -1446,20 +1408,20 @@
 
 
   <!-- =============================================
-       Case Studies / 導入事例セクション
+       Case Studies / 検証事例（デモ）セクション
   ============================================= -->
   <section id="case-studies">
     <div class="section-inner">
       <div class="section-heading fade-in">
         <span class="label">Case Studies</span>
-        <h2>導入事例</h2>
-        <p>医療現場の実際の課題と、AI導入による変化の事例をご紹介します</p>
+        <h2>検証事例（デモ）</h2>
+        <p>医療現場でよくある課題を想定し、AIでどう解決できるかを検証したデモ事例です</p>
       </div>
 
       <div class="case-grid">
         <!-- 事例① 歯科クリニック -->
         <div class="case-card fade-in">
-          <span class="case-tag">歯科クリニック</span>
+          <span class="case-tag">歯科クリニック（想定シナリオ）</span>
           <h3>口腔×全身リスク問診AI</h3>
           <div class="case-block">
             <span class="case-label">Challenge / 課題</span>
@@ -1467,7 +1429,7 @@
           </div>
           <div class="case-block">
             <span class="case-label">Approach / 取り組み</span>
-            <p class="case-text">対話型ガイドとして口腔×全身リスク問診AIを検証。来院前の情報整理と説明の平準化を実現</p>
+            <p class="case-text">対話型ガイドとして口腔×全身リスク問診AIを設計・検証。来院前の情報整理と説明の平準化をデモで再現</p>
           </div>
           <a href="https://amano-dental-interview.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline case-demo-btn">
             ▶ デモを見る ↗
@@ -1476,7 +1438,7 @@
 
         <!-- 事例② 病院 -->
         <div class="case-card fade-in">
-          <span class="case-tag">病院（地域包括ケア）</span>
+          <span class="case-tag">病院（想定シナリオ）</span>
           <h3>看護SOAP記録の自動生成</h3>
           <div class="case-block">
             <span class="case-label">Challenge / 課題</span>
@@ -1484,7 +1446,7 @@
           </div>
           <div class="case-block">
             <span class="case-label">Approach / 取り組み</span>
-            <p class="case-text">週間SOAPの自動生成システム（v5まで反復改善）で、経過データから記録の下書きを生成する運用を実証</p>
+            <p class="case-text">週間SOAPの自動生成システム（v5まで反復改善）で、経過データから記録の下書きを生成する流れをデモで再現・検証</p>
           </div>
           <a href="https://soap-demo-v5.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline case-demo-btn">
             ▶ デモを見る ↗
@@ -1493,7 +1455,7 @@
 
         <!-- 事例③ 職員研修 -->
         <div class="case-card fade-in">
-          <span class="case-tag">病院・診療所（研修）</span>
+          <span class="case-tag">病院・診療所（研修・想定シナリオ）</span>
           <h3>医療職員向けプロンプト基礎講座</h3>
           <div class="case-block">
             <span class="case-label">Challenge / 課題</span>
@@ -1501,7 +1463,7 @@
           </div>
           <div class="case-block">
             <span class="case-label">Approach / 取り組み</span>
-            <p class="case-text">「役割明示・フォーマット指定・出力確認」を柱に体系化した講座を15セッション以上実施</p>
+            <p class="case-text">「役割明示・フォーマット指定・出力確認」を柱に全15回の講座カリキュラムとして体系化</p>
           </div>
           <a href="https://medicalpromptslides.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline case-demo-btn">
             ▶ 講座スライドを見る ↗
@@ -1528,7 +1490,7 @@
         <div class="demo-card fade-in">
           <div class="demo-num">01</div>
           <h3>小児科：24時間「ママの味方」AI</h3>
-          <p>夜間・休日の発熱相談や受診目安の確認ができます</p>
+          <p>夜間・休日の受診先や、#8000（小児救急電話相談）・119番へのご案内をします</p>
           <a href="https://udify.app/chat/xTZB4lgSewfxSkrU" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
             デモを体験する ↗
           </a>
@@ -1556,7 +1518,7 @@
         <div class="demo-card fade-in">
           <div class="demo-num">04</div>
           <h3>歯科：口腔×全身リスク問診AI</h3>
-          <p>対話型ガイドで来院前の情報整理と説明の平準化を実現</p>
+          <p>対話型ガイドで来院前の情報整理と説明の平準化をデモで再現</p>
           <a href="https://amano-dental-interview.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
             デモを体験する ↗
           </a>
@@ -1565,7 +1527,7 @@
         <div class="demo-card fade-in">
           <div class="demo-num">05</div>
           <h3>看護：週間SOAP記録の自動生成（v5）</h3>
-          <p>経過データから看護記録の下書きを自動生成する運用デモ</p>
+          <p>経過データから看護記録の下書きを自動生成する検証デモ</p>
           <a href="https://soap-demo-v5.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; justify-content:center;">
             デモを体験する ↗
           </a>
@@ -1585,39 +1547,6 @@
   </section>
 
 
-  <!-- =============================================
-       Voices / お客様の声セクション
-  ============================================= -->
-  <section id="voices">
-    <div class="section-inner">
-      <div class="section-heading fade-in">
-        <span class="label">Voices</span>
-        <h2>お客様の声</h2>
-        <p>現場の導入担当者からいただいたコメントをご紹介します</p>
-      </div>
-
-      <div class="voices-grid">
-        <div class="voice-card fade-in">
-          <div class="voice-quote">“</div>
-          <p class="voice-text">現場の記録の流れを理解したうえで、AIの落とし所を一緒に考えてくれた。</p>
-          <div class="voice-author">— 診療所 管理者</div>
-        </div>
-
-        <div class="voice-card fade-in">
-          <div class="voice-quote">“</div>
-          <p class="voice-text">スタッフがイメージしやすく、院内向けの説明資料にそのまま使えた。</p>
-          <div class="voice-author">— 歯科クリニック 関係者</div>
-        </div>
-
-        <div class="voice-card fade-in">
-          <div class="voice-quote">“</div>
-          <p class="voice-text">職種別に噛み砕かれており、導入初期の不安を減らしてくれた。</p>
-          <div class="voice-author">— 病院 教育担当</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- =============================================
        料金プランセクション
@@ -1635,30 +1564,29 @@
         <div class="pricing-card fade-in">
           <div class="pricing-plan">Basic Plan</div>
           <h3>基本プラン</h3>
-          <div class="pricing-price">¥50,000<span>〜（税込）</span></div>
+          <div class="pricing-price">¥100,000<span>〜（税込）</span></div>
           <div class="pricing-divider"></div>
           <ul class="pricing-features">
-            <li>AIエージェント構築</li>
-            <li>地域医療データ学習</li>
-            <li>Web 公開設定込み</li>
-            <li>LINE 公開設定込み</li>
-            <li>納品後サポート（1ヶ月）</li>
+            <li>AIチャットボット構築</li>
+            <li>よくある質問と回答の作成（看護師監修）</li>
+            <li>Web 公開設定</li>
+            <li>納品後サポート（1か月）</li>
+            <li>LINE 公開はオプション（別途お見積もり）</li>
           </ul>
         </div>
 
         <!-- モニタープラン（おすすめ） -->
         <div class="pricing-card featured fade-in">
-          <div class="pricing-badge">🔥 毎月3社限定</div>
+          <div class="pricing-badge">先着1〜2院限定</div>
           <div class="pricing-plan">Monitor Plan</div>
           <h3>地域密着モニタープラン</h3>
-          <div class="pricing-price">¥30,000<span>〜（税込）</span></div>
+          <div class="pricing-price">¥0〜30,000<span>（税込）</span></div>
           <div class="pricing-divider"></div>
           <ul class="pricing-features">
             <li>基本プランの全内容</li>
-            <li>実績公開へのご協力が条件</li>
+            <li>条件：検証結果・ご感想の事例公開へのご協力</li>
             <li>優先サポート対応</li>
             <li>地域医療への貢献として割引</li>
-            <li>導入事例としてご紹介</li>
           </ul>
         </div>
 
@@ -1666,14 +1594,12 @@
         <div class="pricing-card fade-in">
           <div class="pricing-plan">Support Plan</div>
           <h3>継続サポート</h3>
-          <div class="pricing-price">¥15,000<span>〜 / 月（税込）</span></div>
+          <div class="pricing-price">¥10,000〜30,000<span> / 月（税込）</span></div>
           <div class="pricing-divider"></div>
           <ul class="pricing-features">
-            <li>回答精度のメンテナンス</li>
-            <li>最新の感染症情報を更新</li>
-            <li>ワクチン在庫情報の更新代行</li>
-            <li>月次レポート提供</li>
-            <li>改善提案・チューニング</li>
+            <li>回答内容の更新（月2回まで）</li>
+            <li>月次の簡易レポート</li>
+            <li>改善提案</li>
           </ul>
         </div>
       </div>
@@ -1689,19 +1615,19 @@
       <div class="section-heading fade-in">
         <span class="label">Process</span>
         <h2>導入までの流れ</h2>
-        <p>無料相談からサポートまで、6つのステップで安心してご導入いただけます</p>
+        <p>フォームでのご相談からサポートまで、6つのステップで安心してご導入いただけます</p>
       </div>
 
       <div class="process-list">
         <div class="process-step fade-in">
           <div class="process-num">STEP 01</div>
-          <h3>無料相談</h3>
-          <p>課題・規模・希望時期をヒアリングします</p>
+          <h3>フォームでご相談</h3>
+          <p>課題・規模・希望時期をフォームでお知らせください</p>
         </div>
         <div class="process-step fade-in">
           <div class="process-num">STEP 02</div>
-          <h3>詳細ヒアリング</h3>
-          <p>業務フローや既存システム環境を確認します</p>
+          <h3>チャットでヒアリング</h3>
+          <p>業務の流れをメール・チャットで確認します</p>
         </div>
         <div class="process-step fade-in">
           <div class="process-num">STEP 03</div>
@@ -1716,7 +1642,7 @@
         <div class="process-step fade-in">
           <div class="process-num">STEP 05</div>
           <h3>構築・導入</h3>
-          <p>開発・システム連携・テストを実施します</p>
+          <p>構築・テストを行い、納品します</p>
         </div>
         <div class="process-step fade-in">
           <div class="process-num">STEP 06</div>
@@ -1745,7 +1671,7 @@
             <span>医療情報のセキュリティは大丈夫ですか？</span>
           </button>
           <div class="faq-answer">
-            <p>オンプレミス寄りの構成・使用APIの選択・アクセス制御・ログ方針を個別に設計します。個人情報は院内規程に沿って、匿名化やマスキングを実施したうえで扱います。</p>
+            <p>本サービスのAIは、診療時間・予約方法・持ち物など“案内”に特化しており、患者さんの個人情報や診療情報は扱いません。症状や薬に関するご相談には回答せず、お電話・受診をご案内する安全設計です。</p>
           </div>
         </div>
 
@@ -1754,7 +1680,7 @@
             <span>費用はどのくらいかかりますか？</span>
           </button>
           <div class="faq-answer">
-            <p>規模・連携範囲・運用人数によって変動します。無料相談のあと、お見積りと段階的に進めるプランをご提案いたします。基本プランは50,000円〜、モニタープランは30,000円〜からご用意しています。</p>
+            <p>内容・規模によって変動します。フォームでご相談いただいたあと、お見積りをご提案いたします。基本プランは100,000円〜（税込）、モニタープランは0〜30,000円（税込・先着1〜2院限定）、継続サポートは月額10,000〜30,000円（税込）です。</p>
           </div>
         </div>
 
@@ -1772,7 +1698,7 @@
             <span>導入までどのくらいの期間がかかりますか？</span>
           </button>
           <div class="faq-answer">
-            <p>PoC（概念実証）は数週間から、本番連携を含む場合は数ヶ月かかることがあります。規模に応じて段階的にリリースすることも可能です。</p>
+            <p>ご相談から納品まで、通常3〜4週間が目安です。</p>
           </div>
         </div>
 
@@ -1781,7 +1707,7 @@
             <span>導入後のサポートはありますか？</span>
           </button>
           <div class="faq-answer">
-            <p>継続サポートプラン（月額15,000円〜）をご用意しています。回答精度のメンテナンス、感染症情報やワクチン在庫情報の更新代行、月次レポートの提供、改善提案・チューニングまで継続的にフォローします。</p>
+            <p>継続サポートプラン（月額10,000〜30,000円・税込）をご用意しています。回答内容の更新（月2回まで）、月次の簡易レポート、改善提案で継続的にフォローします。</p>
           </div>
         </div>
       </div>
@@ -1804,7 +1730,7 @@
         <div class="simulation-steps">
           <div class="sim-step">
             <div class="sim-step-num">1</div>
-            <p><strong>削減時間の試算</strong><br>貴院の受付・記録・書類業務をヒアリングし、AI導入で月間何時間の削減が可能かを数値で算出します</p>
+            <p><strong>削減時間の試算</strong><br>貴院の受付・記録・書類業務をフォーム・メールでお伺いし、AI導入で月間何時間の削減が可能かを数値で算出します</p>
           </div>
           <div class="sim-step">
             <div class="sim-step-num">2</div>
@@ -1836,7 +1762,8 @@
         <p>
           AI導入に関するご質問、サービス詳細のご確認、<br>
           講演・取材依頼など、お気軽にご連絡ください。<br>
-          診断のみでもお気軽にご活用いただけます。
+          試算のみでもお気軽にご活用いただけます。<br>
+          やり取りはメール・チャットで完結します。お電話・訪問の対応はしていません。
         </p>
 
         <div class="contact-main-btn">
@@ -1994,7 +1921,7 @@
 ■ Service 01：受付・電話対応AI
 - 問い合わせ対応・予約案内・混雑案内の自動化
 - 診療科別テンプレ：
-  ・小児科「ママの味方」（夜間発熱相談・受診目安）
+  ・小児科「ママの味方」（夜間・休日の受診先案内、#8000・119番のご案内。医療相談・診断・受診要否の判断には対応しない）
   ・健診・ドック「事務主任」（コース案内・当日キャンセル防止）
   ・耳鼻科・皮膚科「パンク対策」（繁忙期混雑案内）
 
@@ -2004,22 +1931,35 @@
 - 書類業務の効率化と記録品質の平準化
 
 ■ Service 03：AI活用研修・コンサル
-- 医療職員向けプロンプト基礎講座（15セッション以上の実績）
+- 医療職員向けプロンプト基礎講座（全15回のカリキュラムを作成済み。研修としての実施はまだありません）
 - 「役割明示・フォーマット指定・出力確認」を柱に体系化
 - 職種別に噛み砕いた内容で、生成AIの安全な運用を支援
 
-【料金プラン】
-- 基本プラン：50,000円〜（AI構築、データ学習、Web・LINE公開設定込み）
-- モニタープラン：30,000円〜（毎月3社限定、実績公開へのご協力が条件）
-- 継続サポート：月額15,000円〜（回答精度メンテナンス、感染症情報・ワクチン在庫更新）
+【検証事例（デモ）】
+以下はすべて想定シナリオにもとづく検証・デモ事例です。実際の医療機関への導入事例・お客様の声はまだありません。
+- 歯科クリニック（想定シナリオ）：口腔×全身リスク問診AIをデモで再現
+- 病院（想定シナリオ）：週間SOAP記録の下書き自動生成をデモで再現・検証
+- 病院・診療所（研修・想定シナリオ）：全15回の講座カリキュラムとして体系化
+
+【料金プラン（すべて税込）】
+- 基本プラン：100,000円〜（AIチャットボット構築、よくある質問と回答の作成（看護師監修）、Web公開設定、納品後サポート1か月。LINE公開はオプション・別途お見積もり）
+- 地域密着モニタープラン：0〜30,000円（先着1〜2院限定。条件：検証結果・ご感想の事例公開へのご協力）
+- 継続サポート：月額10,000〜30,000円（回答内容の更新（月2回まで）、月次の簡易レポート、改善提案）
+
+【進め方・期間】
+- やり取りはフォーム・メール・チャットで完結します。お電話・訪問の対応はしていません。
+- ご相談から納品まで、通常3〜4週間が目安です。
+- 本サービスのAIは診療時間・予約方法・持ち物など“案内”に特化しており、患者さんの個人情報や診療情報は扱いません。
 
 【無料サービス】
-- 削減時間の算出（ヒアリングで月間削減時間を試算）
+- 削減時間の試算（フォーム・メールで業務内容を伺い、月間削減時間を試算）
 - 専用デモの構築（貴院サイト情報を学習させたデモ作成）
-お問い合わせ：https://forms.gle/PDRv5mvKwaC2konY9
+お問い合わせ（フォーム）：https://forms.gle/PDRv5mvKwaC2konY9
 
 訪問者（主に病院・クリニックの院長・事務長）からの質問に、親切・丁寧な日本語で回答してください。
 AIの難しさへの不安を解消し、導入のメリットを分かりやすく伝えてください。
+上記にない実績・導入事例・お客様の声・料金は作らず、「研修の実績」や「導入事例」を聞かれたら、上記のとおり「カリキュラム作成済み・未実施」「検証事例（デモ）のみ」と正直に答えてください。
+症状・薬・治療などの医療相談には回答せず、緊急時は119番、お子さんの急な症状は#8000、それ以外は医療機関への電話をご案内してください。
 
 【回答スタイルのルール】
 「医療AIエンジニアのAIシステム構築サービスとは？」という質問には、次の構成・ボリュームを参考に回答してください：
@@ -2031,12 +1971,12 @@ AIの難しさへの不安を解消し、導入のメリットを分かりやす
 ### 何ができる？
 - 受付・電話対応AI：問い合わせ対応・予約案内・混雑案内の自動化（診療科別テンプレあり）
 - 問診・記録AI：口腔×全身リスク問診AI、週間SOAP記録の自動生成など書類業務を支援
-- AI活用研修・コンサル：医療職員向けプロンプト基礎講座（15セッション以上の実績）
+- AI活用研修・コンサル：医療職員向けプロンプト基礎講座（全15回のカリキュラムを作成済み）
 
 ### 料金とお試し
-- 基本プラン：50,000円〜
-- モニタープラン：30,000円〜（毎月3社限定）
-- 継続サポート：月額15,000円〜
+- 基本プラン：100,000円〜（税込）
+- モニタープラン：0〜30,000円（税込・先着1〜2院限定）
+- 継続サポート：月額10,000〜30,000円（税込）
 まずは、削減できる時間の試算と専用デモの作成を無料で行っています。
 ---
 
